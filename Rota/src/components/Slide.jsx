@@ -1,88 +1,24 @@
+import React from 'react'
+import './../index.css'
 
-function Slide() {
+const Slide = ({ cardsData }) => {
     return (
 
         // Area de slide o app, banco de implementação futura 
 
-        <div className="h-[29rem] overflow-y-auto grid items-center w-[100%] ">
+        <div className="Slider h-[29rem] overflow-x-scroll flex items-center w-[100%] pl-7 pr-7 snap-x">
+            {cardsData.map((card, index) => (
+            <div className="Slider-track flex ml-5 mr-5 snap-center">
 
-            <div className="Slider-track flex gap-5 ml-10 mr-10 snap-mandatory">
-
-                <a href='#1' className=" hover:shadow-[0_5px_25px_-2px_black] snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
+                <a key={index} href={card.href} className=" hover:shadow-[0_5px_25px_-2px_black]  p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem] flex flex-col gap-2">
+                    <img src={card.imageSrc} className='rounded-md h-56 object-cover' width={'100%'} />
+                    <h1 className='text-xl'>{card.title}</h1>
+                    <p className="text-sm"> {card.description}</p>
                 </a>
-                <a href='#2' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#3' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#4' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#5' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#6' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#7' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#8' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#9' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#10' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#11' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#12' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#13' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#14' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#15' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#16' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-                <a href='#17' className=" hover:shadow-[0_5px_25px_-2px_black]  snap-center p-2 hover:scale-105 transition-all bg-purple-800 rounded-xl w-[20rem] h-[25rem]">
-                    <img className='rounded-xl' src="src/assets/img/slide1.png" width={'100%'} />
-                    <h1>asdadss</h1>
-                </a>
-
+            
             </div>
-
+            ))}
         </div>
-
-
-
     )
 }
 

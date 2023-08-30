@@ -1,45 +1,66 @@
 import Header from "../components/Header"
 import Slide from "../components/Slide"
+import Cards from "../components/Cards"
 import './Home.css'
 
 function Home() {
+
+    const cardsData = [
+        { 
+        imageSrc:'/src/assets/img/museuCafe.jpg' ,
+        title: 'Museu do Café', 
+        description: 'O Museu do Café é referência por contar a trajetória do grão no Brasil e no mundo. Suas exposições abordam detalhes que vão desde o plantio até a xícara, passando pelo mercado e curiosidades do grão.',
+        href:'MuseuCafe'
+        },
+        { 
+        imageSrc:'/src/assets/img/museuPesca.jpg' ,
+        title: 'Museu da Pesca', 
+        description: 'O Museu de Pesca tem finalidades culturais e objetiva a divulgação de conhecimentos originados do estudo do ambiente aquático e da tecnologia aplicada para a exploração racional de recursos marinhos e de águas continentais.',
+        href:'/MuseuPesca',
+        },
+    
+      ];
+
+    const slideData = [
+        { 
+        imageSrc:'/src/assets/img/museuCafe.jpg' ,
+        title: 'Museu do Café', 
+        description: 'O Museu do Café é referência por contar a trajetória do grão no Brasil e no mundo. Suas exposições abordam detalhes que vão desde o plantio até a xícara, passando pelo mercado e curiosidades do grão.' 
+        },
+        { 
+        imageSrc:'/src/assets/img/museuPesca.jpg' ,
+        title: 'Museu da Pesca', 
+        description: 'O Museu de Pesca tem finalidades culturais e objetiva a divulgação de conhecimentos originados do estudo do ambiente aquático e da tecnologia aplicada para a exploração racional de recursos marinhos e de águas continentais.',
+        href:'/MuseuPesca',
+        },
+        { 
+        imageSrc:'/src/assets/img/museuPesca.jpg' ,
+        title: 'Museu da Pesca', 
+        description: 'O Museu de Pesca tem finalidades culturais e objetiva a divulgação de conhecimentos originados do estudo do ambiente aquático e da tecnologia aplicada para a exploração racional de recursos marinhos e de águas continentais.',
+        href:'/MuseuPesca',
+        },
+        { 
+        imageSrc:'/src/assets/img/museuPesca.jpg' ,
+        title: 'Museu da Pesca', 
+        description: 'O Museu de Pesca tem finalidades culturais e objetiva a divulgação de conhecimentos originados do estudo do ambiente aquático e da tecnologia aplicada para a exploração racional de recursos marinhos e de águas continentais.',
+        href:'/MuseuPesca',
+        },
+    
+      ];
+
     return (
-        <div className="pb-10">
+        <div className="w-full h-auto pb-14">
             <Header /> 
 
             <div className="flex justify-center mt-5">
                 <img src="src/assets/img/logo-rota-deitado1.png" width={'150rem'} />
             </div>
 
-            <div className="  flex flex-col gap-5 mt-3 ">
+           
+                <Cards cardsData={cardsData}/>
 
-                <a href="#" className=" flex relative h-[8rem]" >
-                    <div className="absolute w-[90%] h-full bgMy"></div>
-                    <div className="absolute text-justify pl-1 w-[75%] h-[100%] flex flex-col ">
-                        <h1 className="text-xl">Museu do café</h1>
-                        <p className="text-md">O Museu do café conta com seus historiadores a historia de Santos junto ao comércio do café, um inicio marcante pelas...</p>
-                    </div>
-                    <div className="w-full flex justify-end">
-                        <img src="src/assets/img/slide3.png" width={'150rem'} />
-                    </div>
-                </a>
 
-                <a href="#" className=" flex relative h-[8rem]" >
-                    <div className="absolute w-[90%] h-full bgMy"></div>
-                    <div className="absolute text-justify pl-1 w-[75%] h-[100%] flex flex-col ">
-                        <h1 className="text-xl">Museu do café</h1>
-                        <p className="text-md">O Museu do café conta com seus historiadores a historia de Santos junto ao comércio do café, um inicio marcante pelas...</p>
-                    </div>
-                    <div className="w-full flex justify-end">
-                        <img src="src/assets/img/slide1.png" width={'150rem'} />
-                    </div>
-                </a>
-
-            </div>
-            <Slide />
-            <div className="h-[100rem]">
-
-            </div>
+            <Slide cardsData={slideData}/>
         </div>
     )
 }
